@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Magnetic Cable Organizer — TidyDesk</title>
+  <meta name="description" content="Magnetic Cable Organizer Strip — keep chargers, earphones and pens tidy. Free shipping worldwide." />
+  <style>
+    :root{--accent:#2563eb;--muted:#6b7280;--bg:#f8fafc}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:var(--bg); color:#0f172a}
+    .container{max-width:980px;margin:28px auto;padding:0 18px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .logo{display:flex;gap:10px;align-items:center}
+    .logo .mark{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:center}
+    h1{font-size:28px;margin:6px 0 8px}
+    p.lead{color:var(--muted);margin:0 0 16px}
+    .price-badge{background:white;padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.08)}
+    .price{font-size:22px;font-weight:700;margin:0}
+    .oldprice{color:var(--muted);text-decoration:line-through;font-size:13px}
+    button.primary{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;border:0;font-weight:600;cursor:pointer}
+    .gallery{display:flex;flex-direction:column;gap:8px}
+    .gallery img{width:100%;border-radius:10px;display:block}
+    .features{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:16px}
+    .feature{background:white;padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,0.04)}
+    footer{margin-top:32px;padding:18px 0;color:var(--muted);font-size:13px}
+    .tags{display:flex;gap:6px;flex-wrap:wrap}
+    .tag{background:white;padding:8px 10px;border-radius:999px;font-size:13px;box-shadow:0 6px 18px rgba(2,6,23,0.03)}
+    /* modal */
+    .modal-backdrop{position:fixed;inset:0;background:rgba(2,6,23,0.45);display:none;align-items:center;justify-content:center;padding:18px}
+    .modal{background:white;border-radius:12px;max-width:540px;width:100%;padding:18px}
+    label{display:block;margin-top:10px;font-size:13px;color:var(--muted)}
+    input[type=text],input[type=email],textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ef;margin-top:6px}
+    .row{display:flex;gap:8px}
+    .small{flex:1}
+    .muted{color:var(--muted);font-size:13px}
+    .center{display:flex;gap:8px;align-items:center}
+    @media(max-width:880px){.hero{grid-template-columns:1fr;}.price-badge{order:2}.gallery img{height:220px;object-fit:cover}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="mark">TD</div>
+        <div>
+          <div style="font-weight:700">TidyDesk</div>
+          <div style="font-size:12px;color:var(--muted)">Magnetic Cable Organizer</div>
+        </div>
+      </div>
+      <nav class="tags">
+        <div class="tag">Free Worldwide Shipping</div>
+        <div class="tag">Ready to Ship</div>
+        <div class="tag">Bank Transfer / PayID</div>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <section>
+        <div class="gallery">
+          <img src="https://placehold.co/800x480?text=Magnetic+Cable+Strip+—+Demo" alt="Magnetic Cable Organizer" />
+          <div style="display:flex;gap:8px">
+            <img src="https://placehold.co/160x160?text=Black" style="width:80px;height:80px;border-radius:8px;object-fit:cover" />
+            <img src="https://placehold.co/160x160?text=White" style="width:80px;height:80px;border-radius:8px;object-fit:cover" />
+            <img src="https://placehold.co/160x160?text=Pastel" style="width:80px;height:80px;border-radius:8px;object-fit:cover" />
+          </div>
+        </div>
+
+        <h1>Magnetic Cable Organizer Strip — Keep your desk tidy</h1>
+        <p class="lead">Sticks to any surface. Holds chargers, earphones, stylus and more. Perfect for desks, bedside, gaming rigs and school desks.</p>
+
+        <div class="features">
+          <div class="feature">Strong adhesive, removable</div>
+          <div class="feature">Compact & lightweight</div>
+          <div class="feature">Works with any cable or pen</div>
+          <div class="feature">Ships worldwide</div>
+        </div>
+
+      </section>
+
+      <aside class="price-badge">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <div>
+            <div style="font-size:12px;color:var(--muted)">Special Intro Price</div>
+            <div class="price">$9.99 AUD</div>
+            <div class="oldprice">Was $14.99</div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px">
+          <label style="font-size:13px;color:var(--muted);">Color</label>
+          <select id="color" style="margin-top:8px;padding:10px;border-radius:8px;border:1px solid #e6e9ef;width:100%">
+            <option>Black</option>
+            <option>White</option>
+            <option>Pastel</option>
+          </select>
+        </div>
+
+        <div style="margin-top:12px;display:flex;gap:8px">
+          <button class="primary" id="orderBtn">Order Now</button>
+          <button style="padding:10px 12px;border-radius:8px;border:1px solid #e6e9ef;background:white;cursor:pointer" id="bundleBtn">2 for $19.99</button>
+        </div>
+
+        <div style="margin-top:12px;font-size:13px;color:var(--muted)">
+          <div>Payment: Bank Transfer / PayID / PayPal</div>
+          <div style="margin-top:6px">Delivery: 8–15 business days</div>
+        </div>
+
+        <div style="margin-top:12px;font-size:13px">
+          <div style="font-weight:600">How to order (quick):</div>
+          <div class="muted" style="margin-top:6px">Click Order → Fill your name, address, choose color → Send order. We will reply with payment details.</div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>
+          <div style="font-weight:700">TidyDesk</div>
+          <div class="muted">Simple gadgets to declutter your desk</div>
+        </div>
+        <div class="muted">Orders will be sent to <strong>moongi2711@gmail.com</strong></div>
+      </div>
+    </footer>
+  </div>
+
+  <div class="modal-backdrop" id="modal">
+    <div class="modal" role="dialog" aria-modal="true">
+      <h3 style="margin:0">Place your order</h3>
+      <p class="muted" style="margin:6px 0 12px">We’ll send payment details after you submit — your orders go to moongi2711@gmail.com.</p>
+      <form id="orderForm">
+        <label>Name</label>
+        <input type="text" id="name" required placeholder="Full name" />
+        <label>Email</label>
+        <input type="email" id="email" placeholder="customer@example.com (optional)" />
+        <label>Phone / PayID</label>
+        <input type="text" id="phone" placeholder="Phone or PayID name" />
